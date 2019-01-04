@@ -6862,3 +6862,13 @@ Processing by PostsController#create as */*
   [1m[36m (24.7ms)[0m  [1mcommit transaction[0m
 Redirected to http://165.227.90.214:33607/posts/18
 Completed 200 OK in 28ms (ActiveRecord: 25.0ms)
+
+
+Started GET "/posts/18" for 73.75.41.119 at 2019-01-04 01:26:59 +0000
+Cannot render console from 73.75.41.119! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "18"]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.1ms)
