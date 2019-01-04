@@ -6816,3 +6816,21 @@ Processing by PostsController#show as HTML
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "16"]]
   Rendered posts/show.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 73.75.41.119 at 2019-01-04 01:25:19 +0000
+Cannot render console from 73.75.41.119! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 73.75.41.119 at 2019-01-04 01:25:34 +0000
+Cannot render console from 73.75.41.119! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZLov6Eqn23xLO4AI65+lSfgCu2u8Tg6dhR2G7DfcypNeAkRwg0LufUtj06dnveAl2vbYIXbjzzoe2xcT603sjw==", "post"=>{"title"=>"4", "description"=>"we'll see what we get now"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "4"], ["description", "we'll see what we get now"], ["created_at", "2019-01-04 01:25:34.806741"], ["updated_at", "2019-01-04 01:25:34.806741"]]
+  [1m[35m (2.9ms)[0m  commit transaction
+Redirected to http://165.227.90.214:33607/posts/17
+Completed 200 OK in 7ms (ActiveRecord: 3.2ms)
